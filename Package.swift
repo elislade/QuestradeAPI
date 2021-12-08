@@ -14,7 +14,6 @@ let package = Package(
     targets: [
         .target(
             name: "QuestradeAPI",
-            dependencies: [],
             resources: [ .process("FakeResponses") ]
         ),
         .testTarget(

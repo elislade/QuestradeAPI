@@ -81,7 +81,7 @@ class MyAPI {
     
 }
 
-extension MyAPI: QuestAuthDelegate {
+extension MyAPI: AuthProviderDelegate {
     func didAuthorize(_ auth: AuthProvider){
         api.accounts{ res in
             do {
@@ -95,8 +95,7 @@ extension MyAPI: QuestAuthDelegate {
 ```
 
 
-## Authors
-
+## Author
 * **Eli Slade** - *Initial work* - [Eli Slade](https://github.com/elislade)
 
 ## License
