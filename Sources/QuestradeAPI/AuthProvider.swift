@@ -11,7 +11,7 @@ public class AuthProvider: NSObject {
     
     private let _tokenStorage: StorageCoder<Auth>
     
-    var auth: Auth? {
+    public private(set) var auth: Auth? {
         get { _tokenStorage.value }
         set { _tokenStorage.value = newValue }
     }
