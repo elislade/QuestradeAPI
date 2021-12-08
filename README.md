@@ -96,7 +96,7 @@ extension MyAPI: AuthProviderDelegate {
 
 
 ## Author
-* **Eli Slade** - *Initial work* - [Eli Slade](https://github.com/elislade)
+* **Eli Slade** - [Eli Slade](https://github.com/elislade)
 
 ## License
 
