@@ -9,8 +9,8 @@ public enum ResponseProviderError: Error {
 extension AuthProvider: ResponseProvider {
     
     public func request<T: Decodable>(_ req: Request, response: @escaping Response<T>) {
-        if let token = auth {
-            if tokenExpiry <= Date() {
+        if let auth = auth {
+            if auth.expiryDate >= Date() {
                 refreshToken{ res in
                     do {
                         let newToken = try res.get()
@@ -20,7 +20,7 @@ extension AuthProvider: ResponseProvider {
                     }
                 }
             } else {
-                _req(req.resolveURLRequest(from: token))
+                _req(req.resolveURLRequest(from: auth.response))
             }
             
         } else {

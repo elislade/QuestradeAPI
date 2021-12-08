@@ -9,9 +9,9 @@ public class AuthProvider: NSObject {
         case authInfoMissing, urlParsingIssue
     }
     
-    private let _tokenStorage: StorageCoder<AuthResponse>
+    private let _tokenStorage: StorageCoder<Auth>
     
-    var auth: AuthResponse? {
+    var auth: Auth? {
         get { _tokenStorage.value }
         set { _tokenStorage.value = newValue }
     }
@@ -20,15 +20,14 @@ public class AuthProvider: NSObject {
     public var decoder: JSONDecoder = .quest
     public var session = URLSession.shared
     public var delegate: AuthProviderDelegate?
-    public private(set) var tokenExpiry: Date = Date()
     
     public var isAuthorized: Bool {
-        guard auth != nil else { return false }
-        return tokenExpiry <= Date()
+        guard let auth = auth else { return false }
+        return auth.expiryDate < Date()
     }
     
     public init(tokenStore: Storable) {
-        self._tokenStorage = StorageCoder<AuthResponse>(storage: tokenStore)
+        self._tokenStorage = StorageCoder<Auth>(storage: tokenStore)
     }
     
     public func revokeAccess(completion: ((Swift.Error?) -> Void)? = nil) {
@@ -52,7 +51,7 @@ public class AuthProvider: NSObject {
             return
         }
         
-        let endpoint = "token?grant_type=refresh_token&refresh_token=\(auth.refresh_token)"
+        let endpoint = "token?grant_type=refresh_token&refresh_token=\(auth.response.refresh_token)"
         let url = URL(string: endpoint, relativeTo: .questAuthBase)!
         
         session.dataTask(with: URLRequest(url: url)){ data, res, err in
@@ -63,7 +62,7 @@ public class AuthProvider: NSObject {
             
             do {
                 let r = try JSONDecoder.quest.decode(AuthResponse.self, from: data)
-                self.auth = r
+                self.auth = Auth(r)
                 completion(.success(r))
             } catch {
                 completion(.failure(error))
@@ -72,8 +71,8 @@ public class AuthProvider: NSObject {
     }
     
     public func authorize(from url: URL) {
-        if let auth = parseAuthResponse(from: url) {
-            self.auth = auth
+        if let res = parseAuthResponse(from: url) {
+            self.auth = Auth(res)
             self.delegate?.didAuthorize(self)
         }
     }
@@ -91,8 +90,6 @@ public class AuthProvider: NSObject {
             let exp = Double(d["expires_in"] ?? ""),
             let type = d["token_type"]
         else { return nil }
-
-        tokenExpiry = Date().addingTimeInterval(exp)
         
         return AuthResponse(
             access_token: accToken,

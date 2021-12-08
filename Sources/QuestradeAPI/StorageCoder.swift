@@ -7,23 +7,16 @@ class StorageCoder<Value: Codable> {
     
     public var value: Value? {
         set(newValue) {
+            _value = newValue
+            
             if newValue == nil {
                 storage.delete()
             } else {
                 save()
             }
-            
-            _value = newValue
         }
         
-        get {
-            if let v = _value {
-                return v
-            } else {
-                _value = load()
-                return _value
-            }
-        }
+        get { _value }
     }
     
     let storage: Storable
@@ -34,10 +27,11 @@ class StorageCoder<Value: Codable> {
         self.storage = storage
         self.encoder = encoder
         self.decoder = decoder
+        self._value = load()
     }
     
     private func save() {
-        if let data = try? encoder.encode(value) {
+        if let data = try? encoder.encode(_value) {
             storage.set(data)
         }
     }

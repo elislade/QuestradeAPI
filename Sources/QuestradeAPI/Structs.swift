@@ -5,8 +5,13 @@ import Foundation
 //MARK: - https://login.questrade.com/oauth2/
 
 public struct Auth: Codable {
-    let res: AuthResponse
-    var expiryDate: Date
+    public let expiryDate: Date
+    public let response: AuthResponse
+    
+    public init(_ res: AuthResponse){
+        self.expiryDate = Date().addingTimeInterval(TimeInterval(res.expires_in))
+        self.response = res
+    }
 }
 
 public struct AuthResponse: Codable {
