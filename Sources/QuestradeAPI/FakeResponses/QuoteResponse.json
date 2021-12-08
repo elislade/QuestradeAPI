@@ -1,0 +1,25 @@
+{
+  "quotes": [{
+    "symbol": "AAPL",
+    "symbolId": 8049,
+    "tier": "",
+    "bidPrice": 193.22,
+    "bidSize": 4,
+    "askPrice": 193.3,
+    "askSize": 17,
+    "lastTradePriceTrHrs": 193.31,
+    "lastTradePrice": 193.3,
+    "lastTradeSize": 300,
+    "lastTradeTick": "Equal",
+    "lastTradeTime": "2018-06-05T19:59:32.779000-04:00",
+    "volume": 21565963,
+    "openPrice": 193.065,
+    "highPrice": 193.94,
+    "lowPrice": 192.36,
+    "delay": 0,
+    "isHalted": false,
+    "high52w": 193.94,
+    "low52w": 142.2,
+    "VWAP": 193.203756
+  }]
+}

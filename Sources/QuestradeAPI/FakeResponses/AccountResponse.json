@@ -1,0 +1,18 @@
+{
+  "accounts": [{
+    "type": "Margin",
+    "number": "98765432",
+    "status": "Active",
+    "isPrimary": false,
+    "isBilling": false,
+    "clientAccountType": "Individual"
+  }, {
+    "type": "TFSA",
+    "number": "01234567",
+    "status": "Active",
+    "isPrimary": true,
+    "isBilling": true,
+    "clientAccountType": "Individual"
+  }],
+  "userId": 123456
+}

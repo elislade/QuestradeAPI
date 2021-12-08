@@ -1,0 +1,16 @@
+{
+  "positions": [{
+    "symbol": "AAPL",
+    "symbolId": 8049,
+    "openQuantity": 100,
+    "closedQuantity": 0,
+    "currentMarketValue": 19331,
+    "currentPrice": 193.31,
+    "averageEntryPrice": 108.5787,
+    "closedPnl": 0,
+    "openPnl": 8473.13,
+    "totalCost": 10857.87,
+    "isRealTime": false,
+    "isUnderReorg": false
+  }]
+}

@@ -1,0 +1,47 @@
+{
+  "symbols": [{
+    "symbol": "AAPL",
+    "symbolId": 8049,
+    "prevDayClosePrice": 191.83,
+    "highPrice52": 193.42,
+    "lowPrice52": 142.2,
+    "averageVol3Months": 30509002,
+    "averageVol20Days": 21765809,
+    "outstandingShares": 4915138000,
+    "eps": 10.38,
+    "pe": 18.32755,
+    "dividend": 0.73,
+    "yield": 1.5349,
+    "exDate": "2018-05-11T00:00:00.000000-04:00",
+    "marketCap": 935055853100,
+    "tradeUnit": 1,
+    "optionType": null,
+    "optionDurationType": null,
+    "optionRoot": "",
+    "optionContractDeliverables": {
+      "underlyings": [],
+      "cashInLieu": 0
+    },
+    "optionExerciseType": null,
+    "listingExchange": "NASDAQ",
+    "description": "Apple Inc.",
+    "securityType": "Stock",
+    "optionExpiryDate": null,
+    "dividendDate": "2018-05-17T00:00:00.000000-04:00",
+    "optionStrikePrice": null,
+    "isTradable": true,
+    "isQuotable": true,
+    "hasOptions": true,
+    "currency": "USD",
+    "minTicks": [{
+      "pivot": 0,
+      "minTick": 0.0001
+    }, {
+      "pivot": 1,
+      "minTick": 0.01
+    }],
+    "industrySector": "Technology",
+    "industryGroup": "ComputerHardware",
+    "industrySubgroup": "ConsumerElectronics"
+  }]
+}
