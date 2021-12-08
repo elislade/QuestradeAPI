@@ -37,7 +37,7 @@ A `ResponseProvider` that loads fake responses from json files and supplies them
 
 
 ## API
-The `API` class can be initilized with or without an authorizer(`AuthProvider`). If no authorizor is supplied on initilization, all responses will return fake data that is defined in the FakeResponses folder.
+The `API` class can be initilized with or without an authorizer(`AuthProvider`). If no authorizor is supplied on initilization, a default of FakeDataProvider will be used.
 
 ```
 let api = API(provider: auth)
@@ -72,10 +72,9 @@ class MyAPI {
 
     func singIn() {
         // present loginLink
-        // go through oAuth steps
+        // user goes through oAuth steps
         // once steps are completed 
-        
-        
+        // recieve url from quests oAuth and pass to the authorize from url method.
         authProvider.authorize(from: url)
     }
     
