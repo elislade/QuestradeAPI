@@ -4,7 +4,7 @@ import Foundation
 
 //MARK: - https://login.questrade.com/oauth2/
 
-public struct Auth: Codable {
+public struct AuthToken: Codable {
     public let expiryDate: Date
     public let response: AuthResponse
     

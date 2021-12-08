@@ -9,9 +9,9 @@ public class AuthProvider: NSObject {
         case authInfoMissing, urlParsingIssue
     }
     
-    private let _tokenStorage: StorageCoder<Auth>
+    private let _tokenStorage: StorageCoder<AuthToken>
     
-    public private(set) var auth: Auth? {
+    public private(set) var token: AuthToken? {
         get { _tokenStorage.value }
         set { _tokenStorage.value = newValue }
     }
@@ -21,13 +21,8 @@ public class AuthProvider: NSObject {
     public var session = URLSession.shared
     public var delegate: AuthProviderDelegate?
     
-    public var isAuthorized: Bool {
-        guard let auth = auth else { return false }
-        return auth.expiryDate > Date()
-    }
-    
     public init(tokenStore: Storable) {
-        self._tokenStorage = StorageCoder<Auth>(storage: tokenStore)
+        self._tokenStorage = StorageCoder<AuthToken>(storage: tokenStore)
     }
     
     public func revokeAccess(completion: ((Swift.Error?) -> Void)? = nil) {
@@ -39,14 +34,14 @@ public class AuthProvider: NSObject {
                 return
             }
             
-            self.auth = nil
+            self.token = nil
             self.delegate?.didSignOut(self)
             completion?(nil)
         }.resume()
     }
     
     public func refreshToken(completion: @escaping Response<AuthResponse>) {
-        guard let auth = auth else {
+        guard let auth = token else {
             completion(.failure(Error.authInfoMissing))
             return
         }
@@ -62,7 +57,7 @@ public class AuthProvider: NSObject {
             
             do {
                 let r = try JSONDecoder.quest.decode(AuthResponse.self, from: data)
-                self.auth = Auth(r)
+                self.token = AuthToken(r)
                 completion(.success(r))
             } catch {
                 completion(.failure(error))
@@ -72,7 +67,7 @@ public class AuthProvider: NSObject {
     
     public func authorize(from url: URL) {
         if let res = parseAuthResponse(from: url) {
-            self.auth = Auth(res)
+            self.token = AuthToken(res)
             self.delegate?.didAuthorize(self)
         }
     }
