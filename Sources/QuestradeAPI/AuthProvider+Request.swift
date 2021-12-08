@@ -10,7 +10,7 @@ extension AuthProvider: ResponseProvider {
     
     public func request<T: Decodable>(_ req: Request, response: @escaping Response<T>) {
         if let auth = auth {
-            if auth.expiryDate >= Date() {
+            if auth.expiryDate < Date() {
                 refreshToken{ res in
                     do {
                         let newToken = try res.get()

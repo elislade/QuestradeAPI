@@ -23,7 +23,7 @@ public class AuthProvider: NSObject {
     
     public var isAuthorized: Bool {
         guard let auth = auth else { return false }
-        return auth.expiryDate < Date()
+        return auth.expiryDate > Date()
     }
     
     public init(tokenStore: Storable) {
