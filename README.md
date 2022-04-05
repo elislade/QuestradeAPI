@@ -70,7 +70,7 @@ class MyAPI {
         authProvider.delegate = self
     }
 
-    func singIn() {
+    func signIn() {
         // present loginLink
         // user goes through oAuth steps
         // once steps are completed 
