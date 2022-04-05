@@ -10,7 +10,7 @@ public class API {
     }()
     
     public let provider: ResponseProvider
-    public var delegate: APIDelegate?
+    public weak var delegate: APIDelegate?
     
     public init(provider: ResponseProvider = FakeDataProvider()) {
         self.provider = provider

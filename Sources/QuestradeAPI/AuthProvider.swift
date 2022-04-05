@@ -19,7 +19,7 @@ public class AuthProvider: NSObject {
     public var encoder: JSONEncoder = .quest
     public var decoder: JSONDecoder = .quest
     public var session = URLSession.shared
-    public var delegate: AuthProviderDelegate?
+    public weak var delegate: AuthProviderDelegate?
     
     public init(tokenStore: Storable) {
         self._tokenStorage = StorageCoder<AuthToken>(storage: tokenStore)

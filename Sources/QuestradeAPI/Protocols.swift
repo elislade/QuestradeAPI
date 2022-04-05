@@ -7,17 +7,14 @@ public protocol Storable {
     func delete()
 }
 
-public protocol AuthProviderDelegate {
+public protocol AuthProviderDelegate: AnyObject {
     func didSignOut(_ auth: AuthProvider)
     func didAuthorize(_ auth: AuthProvider)
     func didFailToAuthorize(_ auth: AuthProvider, with error: AuthProvider.Error)
-    
-//    func willMakeRequest(_ questAuth: AuthProvider)
-//    func didMakeRequest(_ questAuth: AuthProvider)
 }
 
 
-public protocol APIDelegate {
+public protocol APIDelegate: AnyObject {
     func didRecieveError(_ api: API, error: Error)
 }
 
