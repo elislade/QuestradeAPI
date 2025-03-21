@@ -1,0 +1,79 @@
+{
+  "strategyQuotes": [
+    {
+      "variantId": 1001,
+      "bidPrice": 2.30,
+      "askPrice": 2.50,
+      "underlying": "AAPL",
+      "underlyingId": 101,
+      "openPrice": 2.40,
+      "volatility": 25.6,
+      "delta": 0.65,
+      "gamma": 0.10,
+      "theta": -0.04,
+      "vega": 0.07,
+      "rho": 0.03,
+      "isRealTime": true
+    },
+    {
+      "variantId": 1002,
+      "bidPrice": 5.10,
+      "askPrice": 5.40,
+      "underlying": "TSLA",
+      "underlyingId": 102,
+      "openPrice": 5.25,
+      "volatility": 30.2,
+      "delta": -0.45,
+      "gamma": 0.12,
+      "theta": -0.06,
+      "vega": 0.10,
+      "rho": -0.02,
+      "isRealTime": false
+    },
+    {
+      "variantId": 1003,
+      "bidPrice": 1.80,
+      "askPrice": 2.10,
+      "underlying": "AMZN",
+      "underlyingId": 103,
+      "openPrice": 1.95,
+      "volatility": 28.4,
+      "delta": 0.50,
+      "gamma": 0.08,
+      "theta": -0.03,
+      "vega": 0.06,
+      "rho": 0.01,
+      "isRealTime": true
+    },
+    {
+      "variantId": 1004,
+      "bidPrice": 3.75,
+      "askPrice": 4.00,
+      "underlying": "GOOGL",
+      "underlyingId": 104,
+      "openPrice": 3.90,
+      "volatility": 22.7,
+      "delta": -0.55,
+      "gamma": 0.15,
+      "theta": -0.05,
+      "vega": 0.09,
+      "rho": -0.01,
+      "isRealTime": true
+    },
+    {
+      "variantId": 1005,
+      "bidPrice": 6.00,
+      "askPrice": 6.30,
+      "underlying": "NFLX",
+      "underlyingId": 105,
+      "openPrice": 6.15,
+      "volatility": 35.8,
+      "delta": 0.70,
+      "gamma": 0.09,
+      "theta": -0.07,
+      "vega": 0.12,
+      "rho": 0.05,
+      "isRealTime": false
+    }
+  ]
+}

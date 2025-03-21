@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4530C0B82D6BC47F005DAED2 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 455A64C02D6AD1C6000FCF2E /* WatchApp.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		459FDAE42D7BDD6B00279BFA /* QuestradeAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 45E80EC72D658B480003A5E2 /* QuestradeAPI */; };
+		459FDBB02D7BE37500279BFA /* QuestradeAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 459FDBAF2D7BE37500279BFA /* QuestradeAPI */; };
+		459FDBB22D7BE37900279BFA /* QuestradeAPIFakes in Frameworks */ = {isa = PBXBuildFile; productRef = 459FDBB12D7BE37900279BFA /* QuestradeAPIFakes */; };
+		45E13C312D7BD95D00B006D6 /* QuestradeAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 45C35C8C2D69ECB00003BB34 /* QuestradeAPI */; };
+		45E13C322D7BD95D00B006D6 /* QuestradeAPIFakes in Frameworks */ = {isa = PBXBuildFile; productRef = 45C35C8E2D69ECB00003BB34 /* QuestradeAPIFakes */; };
+		45E13C332D7BD95D00B006D6 /* QuestradeAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 45A0E38E2D7BAB7B00FC4980 /* QuestradeAPI */; };
+		45E13C342D7BD95D00B006D6 /* QuestradeAPIFakes in Frameworks */ = {isa = PBXBuildFile; productRef = 45A0E3902D7BAB7B00FC4980 /* QuestradeAPIFakes */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4530C0B92D6BC47F005DAED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45E80EA02D6589820003A5E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455A64BF2D6AD1C6000FCF2E;
+			remoteInfo = WristApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4530C0BB2D6BC47F005DAED2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4530C0B82D6BC47F005DAED2 /* WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		455A64C02D6AD1C6000FCF2E /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E80EA82D6589820003A5E2 /* Questrade API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Questrade API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		451EAF152D658C3900AA8485 /* Exceptions for "QuestradeAPIExample" folder in "MainApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 45E80EA72D6589820003A5E2 /* MainApp */;
+		};
+		455A64DA2D6AD238000FCF2E /* Exceptions for "QuestradeAPIExample" folder in "WatchApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				QuestradeAPIExampleApp.swift,
+				Views/AuthorizeAccessButton.swift,
+				Views/AuthorizedView.swift,
+				Views/AuthStateActions.swift,
+				Views/ContentView.swift,
+				Views/EnvironmentToggle.swift,
+				Views/Errors/ErrorListView.swift,
+				Views/Errors/ErrorModifier.swift,
+				Views/Errors/ErrorStackView.swift,
+				Views/Errors/ErrorView.swift,
+				Views/HeaderView.swift,
+				Views/Pages/_Page.swift,
+				Views/Pages/_PageStyle.swift,
+				Views/Pages/MainPage.swift,
+				Views/Pages/Tests/_TestPage.swift,
+				Views/Pages/Tests/_TestStatus.swift,
+				Views/Pages/Tests/TestAccountPage.swift,
+				Views/Pages/Tests/TestMarketsPage.swift,
+				Views/Pages/Tests/TestStreamingPage.swift,
+				Views/Pages/Tests/TestSymbolsPage.swift,
+				Views/RevokeAccessButton.swift,
+				Views/Style/BGMaterial.swift,
+				Views/Style/ButtonStyle.swift,
+				Views/Style/FocusedMaterial.swift,
+				Views/Style/GroupMaterial.swift,
+				Views/Style/ProgressStyle.swift,
+				Views/Style/TintFillMaterial.swift,
+				Views/TokenModifier.swift,
+			);
+			target = 455A64BF2D6AD1C6000FCF2E /* WatchApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		45E80EAA2D6589820003A5E2 /* QuestradeAPIExample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				451EAF152D658C3900AA8485 /* Exceptions for "QuestradeAPIExample" folder in "MainApp" target */,
+				455A64DA2D6AD238000FCF2E /* Exceptions for "QuestradeAPIExample" folder in "WatchApp" target */,
+			);
+			path = QuestradeAPIExample;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		455A64BD2D6AD1C6000FCF2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459FDBB02D7BE37500279BFA /* QuestradeAPI in Frameworks */,
+				459FDBB22D7BE37900279BFA /* QuestradeAPIFakes in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E80EA52D6589820003A5E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459FDAE42D7BDD6B00279BFA /* QuestradeAPI in Frameworks */,
+				45E13C342D7BD95D00B006D6 /* QuestradeAPIFakes in Frameworks */,
+				45E13C332D7BD95D00B006D6 /* QuestradeAPI in Frameworks */,
+				45E13C322D7BD95D00B006D6 /* QuestradeAPIFakes in Frameworks */,
+				45E13C312D7BD95D00B006D6 /* QuestradeAPI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45B5A9F02D65D7B9001183F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45E80E9F2D6589820003A5E2 = {
+			isa = PBXGroup;
+			children = (
+				45E80EAA2D6589820003A5E2 /* QuestradeAPIExample */,
+				45B5A9F02D65D7B9001183F0 /* Frameworks */,
+				45E80EA92D6589820003A5E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45E80EA92D6589820003A5E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45E80EA82D6589820003A5E2 /* Questrade API.app */,
+				455A64C02D6AD1C6000FCF2E /* WatchApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		455A64BF2D6AD1C6000FCF2E /* WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455A64CE2D6AD1C8000FCF2E /* Build configuration list for PBXNativeTarget "WatchApp" */;
+			buildPhases = (
+				455A64BC2D6AD1C6000FCF2E /* Sources */,
+				455A64BD2D6AD1C6000FCF2E /* Frameworks */,
+				455A64BE2D6AD1C6000FCF2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45E13C9B2D7BDAF600B006D6 /* PBXTargetDependency */,
+				45E13C9D2D7BDAF600B006D6 /* PBXTargetDependency */,
+			);
+			name = WatchApp;
+			packageProductDependencies = (
+				459FDBAF2D7BE37500279BFA /* QuestradeAPI */,
+				459FDBB12D7BE37900279BFA /* QuestradeAPIFakes */,
+			);
+			productName = "WatchApp Watch App";
+			productReference = 455A64C02D6AD1C6000FCF2E /* WatchApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45E80EA72D6589820003A5E2 /* MainApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45E80EB72D6589830003A5E2 /* Build configuration list for PBXNativeTarget "MainApp" */;
+			buildPhases = (
+				45E80EA42D6589820003A5E2 /* Sources */,
+				45E80EA52D6589820003A5E2 /* Frameworks */,
+				45E80EA62D6589820003A5E2 /* Resources */,
+				4530C0BB2D6BC47F005DAED2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4530C0BA2D6BC47F005DAED2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				45E80EAA2D6589820003A5E2 /* QuestradeAPIExample */,
+			);
+			name = MainApp;
+			packageProductDependencies = (
+				45E80EC72D658B480003A5E2 /* QuestradeAPI */,
+				45C35C8C2D69ECB00003BB34 /* QuestradeAPI */,
+				45C35C8E2D69ECB00003BB34 /* QuestradeAPIFakes */,
+				45A0E38E2D7BAB7B00FC4980 /* QuestradeAPI */,
+				45A0E3902D7BAB7B00FC4980 /* QuestradeAPIFakes */,
+			);
+			productName = QuestradeAPIExample;
+			productReference = 45E80EA82D6589820003A5E2 /* Questrade API.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45E80EA02D6589820003A5E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					455A64BF2D6AD1C6000FCF2E = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					45E80EA72D6589820003A5E2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 45E80EA32D6589820003A5E2 /* Build configuration list for PBXProject "QuestradeAPIExample" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45E80E9F2D6589820003A5E2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 45E80EA92D6589820003A5E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45E80EA72D6589820003A5E2 /* MainApp */,
+				455A64BF2D6AD1C6000FCF2E /* WatchApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		455A64BE2D6AD1C6000FCF2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E80EA62D6589820003A5E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		455A64BC2D6AD1C6000FCF2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E80EA42D6589820003A5E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4530C0BA2D6BC47F005DAED2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 455A64BF2D6AD1C6000FCF2E /* WatchApp */;
+			targetProxy = 4530C0B92D6BC47F005DAED2 /* PBXContainerItemProxy */;
+		};
+		45E13C9B2D7BDAF600B006D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 45E13C9A2D7BDAF600B006D6 /* QuestradeAPI */;
+		};
+		45E13C9D2D7BDAF600B006D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 45E13C9C2D7BDAF600B006D6 /* QuestradeAPIFakes */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		455A64CF2D6AD1C8000FCF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuestradeAPIExample/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuestradeAPI;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(PRODUCT_ID)";
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_ID).watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.6;
+			};
+			name = Debug;
+		};
+		455A64D02D6AD1C8000FCF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuestradeAPIExample/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuestradeAPI;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(PRODUCT_ID)";
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_ID).watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.6;
+			};
+			name = Release;
+		};
+		45E80EB52D6589830003A5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_ID = "com.example.questradeAPI.${DEVELOPMENT_TEAM}";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		45E80EB62D6589830003A5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_ID = "com.example.questradeAPI.${DEVELOPMENT_TEAM}";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		45E80EB82D6589830003A5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuestradeAPIExample/QuestradeAPIExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuestradeAPIExample/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuestradeAPIExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Questrade API";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_ID)";
+				PRODUCT_NAME = "$(INFOPLIST_KEY_CFBundleDisplayName)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17;
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		45E80EB92D6589830003A5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuestradeAPIExample/QuestradeAPIExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuestradeAPIExample/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuestradeAPIExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Questrade API";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_ID)";
+				PRODUCT_NAME = "$(INFOPLIST_KEY_CFBundleDisplayName)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17;
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		455A64CE2D6AD1C8000FCF2E /* Build configuration list for PBXNativeTarget "WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455A64CF2D6AD1C8000FCF2E /* Debug */,
+				455A64D02D6AD1C8000FCF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45E80EA32D6589820003A5E2 /* Build configuration list for PBXProject "QuestradeAPIExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45E80EB52D6589830003A5E2 /* Debug */,
+				45E80EB62D6589830003A5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45E80EB72D6589830003A5E2 /* Build configuration list for PBXNativeTarget "MainApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45E80EB82D6589830003A5E2 /* Debug */,
+				45E80EB92D6589830003A5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../QuestradeAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		459FDBAF2D7BE37500279BFA /* QuestradeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */;
+			productName = QuestradeAPI;
+		};
+		459FDBB12D7BE37900279BFA /* QuestradeAPIFakes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */;
+			productName = QuestradeAPIFakes;
+		};
+		45A0E38E2D7BAB7B00FC4980 /* QuestradeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuestradeAPI;
+		};
+		45A0E3902D7BAB7B00FC4980 /* QuestradeAPIFakes */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuestradeAPIFakes;
+		};
+		45C35C8C2D69ECB00003BB34 /* QuestradeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuestradeAPI;
+		};
+		45C35C8E2D69ECB00003BB34 /* QuestradeAPIFakes */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuestradeAPIFakes;
+		};
+		45E13C9A2D7BDAF600B006D6 /* QuestradeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */;
+			productName = QuestradeAPI;
+		};
+		45E13C9C2D7BDAF600B006D6 /* QuestradeAPIFakes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A0E38D2D7BAB7B00FC4980 /* XCLocalSwiftPackageReference "../../QuestradeAPI" */;
+			productName = QuestradeAPIFakes;
+		};
+		45E80EC72D658B480003A5E2 /* QuestradeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuestradeAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 45E80EA02D6589820003A5E2 /* Project object */;
+}

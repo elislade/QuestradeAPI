@@ -1,0 +1,74 @@
+{
+  "positions": [
+    {
+      "symbol": "AAPL",
+      "symbolId": 101,
+      "openQuantity": 50.0,
+      "closedQuantity": 10.0,
+      "currentMarketValue": 8500.0,
+      "currentPrice": 170.0,
+      "averageEntryPrice": 160.0,
+      "closedPnl": 200.0,
+      "openPnl": 500.0,
+      "totalCost": 8000.0,
+      "isRealTime": true,
+      "isUnderReorg": false
+    },
+    {
+      "symbol": "TSLA",
+      "symbolId": 102,
+      "openQuantity": 20.0,
+      "closedQuantity": 5.0,
+      "currentMarketValue": 12000.0,
+      "currentPrice": 600.0,
+      "averageEntryPrice": 580.0,
+      "closedPnl": 100.0,
+      "openPnl": 400.0,
+      "totalCost": 11600.0,
+      "isRealTime": true,
+      "isUnderReorg": false
+    },
+    {
+      "symbol": "AMZN",
+      "symbolId": 103,
+      "openQuantity": 30.0,
+      "closedQuantity": 10.0,
+      "currentMarketValue": 9900.0,
+      "currentPrice": 330.0,
+      "averageEntryPrice": 320.0,
+      "closedPnl": 150.0,
+      "openPnl": 300.0,
+      "totalCost": 9600.0,
+      "isRealTime": false,
+      "isUnderReorg": false
+    },
+    {
+      "symbol": "GOOGL",
+      "symbolId": 104,
+      "openQuantity": 40.0,
+      "closedQuantity": 15.0,
+      "currentMarketValue": 11200.0,
+      "currentPrice": 280.0,
+      "averageEntryPrice": 275.0,
+      "closedPnl": 180.0,
+      "openPnl": 200.0,
+      "totalCost": 11000.0,
+      "isRealTime": true,
+      "isUnderReorg": true
+    },
+    {
+      "symbol": "NFLX",
+      "symbolId": 105,
+      "openQuantity": 25.0,
+      "closedQuantity": 5.0,
+      "currentMarketValue": 8750.0,
+      "currentPrice": 350.0,
+      "averageEntryPrice": 340.0,
+      "closedPnl": 125.0,
+      "openPnl": 275.0,
+      "totalCost": 8500.0,
+      "isRealTime": false,
+      "isUnderReorg": false
+    }
+  ]
+}

@@ -1,103 +1,95 @@
 # QuestradeAPI
 
-## Getting Started
+## 🚀 Getting Started
 
+The **QuestradeAPI** Swift library is built around two main components:
 
-The QuestAPI is made up of two main concepts:
-1. ResponseProviders
-2. API
+1. **Requestable** – Defines API requests in an abstract way.
+2. **Session** – Manages and executes network requests.
 
+---
 
-## ResponseProviders
-The job of the provider is to return data to `API` for a given request. QuestradeAPI comes with two providers, `AuthProvider` and `FakeDataProvider`. You can conform to `ResponseProvider` and build your own providers if you have extra custom behaviour that you need. To use a given provider just pass the provider to the initilization of `API`.
+## 📌 Requestable
 
-```
-let api = API(provider: CustomProvider())
-```
+`Requestable` is a protocol that all API request types conform to. It acts as an abstraction over `URLRequest`, where each API endpoint is represented by a concrete type conforming to `Requestable`.
 
-### AuthProvider
-The `AuthProvider` class requires a class or struct that conforms to `Storable`. The purpose of `AuthProvider` is for authorizing and deauthorizing requests for the `API`.
+### 🔹 RequestableHandler
 
-```
-let auth = AuthProvider(tokenStore: TokenStore())
-```
+A `RequestableHandler` is responsible for converting an abstract `Requestable` into a concrete `URLRequest`. It fetches data and decodes it into the associated `Response` type.
 
-#### Token Store
-The `Storable` protocol is for you to conform to so that you can choose how to securly store the api token.
-```
-class TokenStore: Storable {
-    // func get() -> Data
-    // func set(_ data: Data)
-    // func delete()
+By default, it uses `DefaultBuilder`, but you can swap the builder using the public setter `requestBuilder`.
+
+### 🏗️ Built-in Request Builders
+
+#### **1. `DefaultBuilder`**
+
+- Constructs requests with no additional context.
+- Requires a non-nil host; otherwise, it throws an error.
+
+#### **2. `AuthResponse`**
+
+- Stores authentication tokens and host information for the current Questrade session.
+- When set as the `requestBuilder`, it automatically authorizes all outgoing requests.
+
+#### **3. `FakeDataRequestBuilder`**
+
+- Maps `Requestable` to a local JSON file found in the `QuestradeAPIFakes` library.
+- If no matching file is found, an error is thrown.
+
+---
+
+## 🌐 Session
+
+`Session` is a subclass of `URLRequestHandler` that serves as the **default** method for processing all `Requestable` requests.
+
+### 🔹 Features
+
+- **`ObservableObject`** – Allows SwiftUI or Combine-based observers to react to changes.
+- **Global error reporting** – Exposes an `@Published errors` array.
+- **Advanced logging & metrics** – Can be customized via `URLSession` delegate initialization.
+- **Authorization support** – Manage auth states via `@Published var token`.
+
+---
+
+## 📖 Example Usage
+
+For an example project that runs on macOS, iOS, tvOS, watchOS, and visionOS; check out the included `QuestradeAPIExample` Xcode project.
+
+### Single Fetch Request 
+```swift
+Task {
+    let request = QuotesRequest(symbolId: 8049)
+    
+    // Implicit Request
+    let quotes = try await request().quotes
+    
+    // Explicit Request
+    let quotes = try await Session.shared.perform(request).quotes
 }
 ```
 
-### FakeDataProvider
-A `ResponseProvider` that loads fake responses from json files and supplies them as responses. This provider is used by default for `API` if none is provided on init.
-
-
-## API
-The `API` class can be initilized with or without an authorizer(`AuthProvider`). If no authorizor is supplied on initilization, a default of FakeDataProvider will be used.
-
-```
-let api = API(provider: auth)
-
-api.accounts { res in
-    switch res {
-    case .failure(let error): // log error
-    case .success(let actResponse):
-        let accounts = actResponse.accounts
+### Stream Request
+```swift
+let streamTask = Task {
+    let request = QuotesRequest(symbolId: 8049)
+    for try await quote in request.stream {
+        print(quote.volumn)
     }
 }
+
+// Stop Streaming
+streamTask.cancel()
 ```
 
-## Full Init Code
+---
 
-```
-class MyAPI {
+## 👨‍💻 Author
 
-    let loginLink = URL.questAuthURL(
-        clientId: "aFsd42sf234FGsdf",
-        callbackURL: URL(string: "https://myurl.com/auth-redirect")!
-    )
-    
-    let authProvider = AuthProvider(tokenStore: TokenStore())
-    lazy var api: API = { API(provider: authProvider) }()
-    
-    private(set) var accounts: Set<Account> = []
-    
-    init() {
-        authProvider.delegate = self
-    }
+- **Eli Slade** - [GitHub](https://github.com/elislade)
 
-    func signIn() {
-        // present loginLink
-        // user goes through oAuth steps
-        // once steps are completed 
-        // recieve url from quests oAuth and pass to the authorize from url method.
-        authProvider.authorize(from: url)
-    }
-    
-}
+---
 
-extension MyAPI: AuthProviderDelegate {
-    func didAuthorize(_ auth: AuthProvider){
-        api.accounts{ res in
-            do {
-                self.accounts.update(try res.get().accounts)
-            } catch {
-                //TODO: handle error
-            }
-        }
-    }
-}
-```
+## 📜 License
 
-
-## Author
-* **Eli Slade** - [Eli Slade](https://github.com/elislade)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 

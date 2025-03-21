@@ -1,24 +1,30 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "QuestradeAPI",
-    platforms: [.iOS(.v10), .tvOS(.v10), .watchOS(.v3), .macOS(.v10_12)],
+    platforms: [.iOS(.v14), .tvOS(.v14), .watchOS(.v8), .macOS(.v11)],
     products: [
         .library(
             name: "QuestradeAPI",
             targets: ["QuestradeAPI"]
         ),
+        .library(
+            name: "QuestradeAPIFakes",
+            targets: ["QuestradeAPIFakes"]
+        ),
     ],
     targets: [
+        .target(name: "QuestradeAPI"),
         .target(
-            name: "QuestradeAPI",
+            name: "QuestradeAPIFakes",
+            dependencies: ["QuestradeAPI"],
             resources: [ .process("FakeResponses") ]
         ),
         .testTarget(
             name: "QuestradeAPITests",
-            dependencies: ["QuestradeAPI"]
-        ),
+            dependencies: ["QuestradeAPI", "QuestradeAPIFakes"]
+        )
     ]
 )

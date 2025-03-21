@@ -1,0 +1,7 @@
+{
+    "access_token": "123abc",
+    "refresh_token": "abc123",
+    "api_server": "https://questrade.com",
+    "token_type": "refresh",
+    "expires_in": 300
+}

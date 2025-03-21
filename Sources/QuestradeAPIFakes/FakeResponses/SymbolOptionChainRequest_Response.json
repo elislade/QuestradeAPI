@@ -1,0 +1,52 @@
+{
+  "optionChain": [
+    {
+      "expiryDate": "2024-12-20T00:00:00.00Z",
+      "description": "AAPL Dec 20 2024 150 Call",
+      "listingExchange": "NASDAQ",
+      "optionExerciseType": "American",
+      "chainPerRoot": [
+        {
+        "optionRoot": "AAPL",
+          "chainPerStrikePrice": [
+            {
+              "strikePrice": 150.0,
+              "callSymbolId": 5001,
+              "putSymbolId": 5002
+            },
+            {
+              "strikePrice": 160.0,
+              "callSymbolId": 5003,
+              "putSymbolId": 5004
+            }
+          ],
+          "multiplier": 100
+        }
+      ]
+    },
+    {
+      "expiryDate": "2025-06-21T00:00:00.00Z",
+      "description": "TSLA Jun 21 2025 900 Put",
+      "listingExchange": "NYSE",
+      "optionExerciseType": "European",
+      "chainPerRoot": [
+        {
+          "optionRoot": "TSLA",
+          "chainPerStrikePrice": [
+            {
+              "strikePrice": 900.0,
+              "callSymbolId": 6001,
+              "putSymbolId": 6002
+            },
+            {
+              "strikePrice": 950.0,
+              "callSymbolId": 6003,
+              "putSymbolId": 6004
+            }
+          ],
+          "multiplier": 100
+        }
+      ]
+    }
+  ]
+}

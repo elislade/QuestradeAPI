@@ -1,0 +1,30 @@
+{
+  "markets": [
+    {
+      "name": "Toronto Stock Exchange",
+      "tradingVenues": ["TSX", "TSXV"],
+      "defaultTradingVenue": "TSX",
+      "primaryOrderRoutes": ["ALPHA", "MATCH"],
+      "secondaryOrderRoutes": ["CHIX", "NEO"],
+      "level1Feeds": ["TSX-L1", "TSXV-L1"],
+      "level2Feeds": ["TSX-L2", "TSXV-L2"],
+      "extendedStartTime": "2024-02-19T07:00:00.00Z",
+      "startTime": "2024-02-19T09:30:00.00Z",
+      "endTime": "2024-02-19T16:00:00.00Z",
+      "snapQuotesLimit": 5
+    },
+    {
+      "name": "NASDAQ Stock Market",
+      "tradingVenues": ["NASDAQ"],
+      "defaultTradingVenue": "NASDAQ",
+      "primaryOrderRoutes": ["INET", "BATS"],
+      "secondaryOrderRoutes": ["ARCA", "EDGE"],
+      "level1Feeds": ["NASDAQ-L1"],
+      "level2Feeds": ["NASDAQ-L2"],
+      "extendedStartTime": "2024-02-19T08:00:00.00Z",
+      "startTime": "2024-02-19T09:30:00.00Z",
+      "endTime": "2024-02-19T16:00:00.00Z",
+      "snapQuotesLimit": 10
+    }
+  ]
+}
