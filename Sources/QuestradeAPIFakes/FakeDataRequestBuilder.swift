@@ -1,7 +1,7 @@
 import Foundation
 import QuestradeAPI
 
-public struct FakeDateRequestBuilder: RequestableURLBuilder {
+public struct FakeDataRequestBuilder: RequestableURLBuilder {
     
     public nonisolated init() {}
     
@@ -21,8 +21,8 @@ public struct FakeDateRequestBuilder: RequestableURLBuilder {
 }
 
 
-public extension RequestableURLBuilder where Self == FakeDateRequestBuilder {
+public extension RequestableURLBuilder where Self == FakeDataRequestBuilder {
     
-    static nonisolated var fakeData: Self { FakeDateRequestBuilder() }
+    static nonisolated var fakeData: Self { FakeDataRequestBuilder() }
     
 }

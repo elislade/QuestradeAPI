@@ -88,7 +88,7 @@ struct TestStreamingPage: View {
                            Spacer()
                            
                            VStack(alignment: .leading) {
-                               Text("VOLUMN").font(.caption).opacity(0.5)
+                               Text("VOLUME").font(.caption).opacity(0.5)
                                Text(quote.volume, format: .number)
                                    .monospacedDigit()
                            }
